@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>Create Blog</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+
+<div class="container">
+
+```
+<div class="card">
+
+    <h1>Create Blog Post</h1>
+
+    <form action="/blog/create" method="post">
+
+        <input
+            type="text"
+            name="title"
+            placeholder="Enter title"
+            required
+        >
+
+        <input
+            type="text"
+            name="author"
+            placeholder="Author name"
+        >
+
+        <textarea
+            name="content"
+            placeholder="Write your blog..."
+            required></textarea>
+
+        <div style="margin-top:15px;">
+
+            <button type="submit" class="btn btn-green">
+                Publish Post
+            </button>
+
+            <a href="/blog" class="btn btn-muted">
+                Back
+            </a>
+
+        </div>
+
+    </form>
+
+</div>
+```
+
+</div>
+
+</body>
+</html>

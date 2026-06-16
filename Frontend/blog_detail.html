@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>{{ post.title }}</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+
+<div class="container">
+
+```
+<div class="card">
+
+    <h1>{{ post.title }}</h1>
+
+    <p class="meta">
+        By {{ post.author }}
+    </p>
+
+    <hr>
+
+    <p>
+        {{ post.content }}
+    </p>
+
+    <br>
+
+    <a href="/blog/update/{{ post.id }}" class="btn btn-green">
+        Edit
+    </a>
+
+    <form action="/blog/delete/{{ post.id }}"
+          method="post"
+          style="display:inline;"
+          onsubmit="return confirm('Are you sure you want to delete this post?');">
+
+        <button type="submit" class="btn btn-red">
+            Delete
+        </button>
+
+    </form>
+
+    <a href="/blog" class="btn btn-muted">
+        Back
+    </a>
+
+</div>
+```
+
+</div>
+
+</body>
+</html>
